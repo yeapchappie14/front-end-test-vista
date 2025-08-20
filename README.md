@@ -1,16 +1,29 @@
-# front_end_test_vista
+# Vista Test — Flutter Frontend
 
-A new Flutter project.
+A simple Flutter app that consumes the **Node + Express + Prisma + MySQL** backend.
 
-## Getting Started
+## Features
+- **CompanyListScreen**: Lists companies (name + registration number) and shows their services.
+- **CreateCompanyScreen**: Form to create a company (name, registration number) with validation.
+- **CreateServiceScreen**: Form to create a service (name, description, price) with a **company dropdown** + validation.
+- Proper loading & error states.
 
-This project is a starting point for a Flutter application.
+## Stack
+- Flutter 3.x (Material 3)
+- `provider` for state management
+- `http` for API calls
 
-A few resources to get you started if this is your first Flutter project:
+## Run the app
+> Make sure the backend is running first and reachable at `http://localhost:4000`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+flutter pub get
+# Recommended first run
+flutter run -d chrome
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# or Windows desktop (after enabling Windows support)
+# flutter config --enable-windows-desktop
+# flutter run -d windows
+
+# or Android emulator (Android Studio + AVD)
+# flutter run -d <emulator_id>
